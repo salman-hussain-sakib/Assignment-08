@@ -44,10 +44,15 @@ function LoginContent() {
   };
 
   const handleSocialLogin = async () => {
-    await signIn.social({
-        provider: "google",
-        callbackURL: "/",
-    });
+    try {
+      await signIn.social({
+          provider: "google",
+          callbackURL: "/",
+      });
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to login with Google. Please try again.");
+    }
   };
 
   return (
