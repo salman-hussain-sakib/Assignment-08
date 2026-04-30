@@ -8,7 +8,9 @@ import { Mail, Lock, User, Image as ImageIcon, UserPlus, Globe, ArrowRight, Book
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 
-export default function RegisterPage() {
+import { Suspense } from "react";
+
+function RegisterContent() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -195,6 +197,18 @@ export default function RegisterPage() {
         </div>
       </motion.div>
     </div>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="loading loading-spinner loading-lg text-primary"></span>
+      </div>
+    }>
+      <RegisterContent />
+    </Suspense>
   );
 }
 
