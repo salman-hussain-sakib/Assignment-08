@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { MessageCircle, Send, Camera, Globe, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -14,10 +14,10 @@ export default function Footer() {
               Empowering learners worldwide with industry-leading courses and expert-led training. Transform your career with SkillSphere.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-base-300 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Facebook size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-base-300 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Twitter size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-base-300 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Instagram size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-base-300 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Linkedin size={18} /></a>
+              <a href="#" className="w-10 h-10 rounded-full bg-base-300 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><MessageCircle size={18} /></a>
+              <a href="#" className="w-10 h-10 rounded-full bg-base-300 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Send size={18} /></a>
+              <a href="#" className="w-10 h-10 rounded-full bg-base-300 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Camera size={18} /></a>
+              <a href="#" className="w-10 h-10 rounded-full bg-base-300 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Globe size={18} /></a>
             </div>
           </div>
 

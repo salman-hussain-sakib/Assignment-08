@@ -1,56 +1,53 @@
-# 🎓 SkillSphere – Online Learning Platform
+# SkillSphere – Online Learning Platform
 
-SkillSphere is a modern, premium online learning platform where users can explore industry-leading courses, manage their profiles, and enhance their skills. Built with a focus on clean UI/UX, responsiveness, and secure authentication.
+SkillSphere is a modern, professional-grade online learning platform built with Next.js. It allows users to explore a variety of skill-based courses, watch lessons, and manage their learning profiles. The application features a premium UI/UX design inspired by leading educational platforms.
 
-## 🚀 Live URL
-[SkillSphere - Live Preview](https://skillsphere-learning.vercel.app) *(Placeholder)*
+## 🚀 Purpose
+The goal of SkillSphere is to provide a seamless and interactive learning experience for students, offering high-quality courses with a focus on responsiveness, performance, and security.
+
+## 🔗 Live URL
+[Coming Soon / Deployment Pending]
 
 ## ✨ Key Features
-- **Modern UI/UX**: Clean, smooth, and premium design using DaisyUI and Framer Motion.
-- **Full Responsiveness**: Optimized for Mobile, Tablet, and Desktop.
-- **Authentication**: Secure Login/Register system powered by BetterAuth (Email/Password & Google).
-- **Course Exploration**: All Courses page with real-time search functionality.
-- **Protected Routes**: Course details are only accessible to logged-in users.
-- **Profile Management**: Users can view and update their profile information (Name & Image).
-- **Extra Sections**: Trending courses, Learning tips, and Top Instructors sections on the Home page.
-- **Toast Notifications**: Interactive feedback for all user actions.
+- **Modern UI/UX**: A visually stunning, responsive design using Tailwind CSS and DaisyUI.
+- **Course Catalog**: Browse at least 6 diverse courses with categories like Development, Design, and Marketing.
+- **Search & Filter**: Search courses by title and filter by categories on the All Courses page.
+- **Protected Routes**: Course details and user profiles are secured and only accessible to logged-in users.
+- **Authentication**: Secure login and registration using **BetterAuth**, including Google Social Login.
+- **User Profiles**: View and update your profile information (name and photo URL).
+- **Smooth Animations**: Interactive experience powered by **Framer Motion**.
+- **Toast Notifications**: Real-time feedback for actions like login, registration, and profile updates.
+- **Responsive Design**: Optimized for Mobile, Tablet, and Desktop devices.
 
-## 🛠️ Tech Stack
-- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **UI Components**: [DaisyUI](https://daisyui.com/)
-- **Authentication**: [BetterAuth](https://better-auth.com/)
-- **Database**: [SQLite (Better-SQLite3)](https://github.com/WiseLibs/better-sqlite3)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Notifications**: [React Hot Toast](https://react-hot-toast.com/)
+## 🛠️ Technology Stack
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS, DaisyUI
+- **Authentication**: BetterAuth
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Database**: SQLite (via Better-SQLite3)
+- **State/Feedback**: React Hot Toast
 
 ## 📦 NPM Packages Used
 - `better-auth`
-- `daisyui`
+- `better-sqlite3`
 - `framer-motion`
 - `lucide-react`
 - `react-hot-toast`
-- `better-sqlite3`
 - `clsx`
 - `tailwind-merge`
 
 ## ⚙️ Environment Variables
-Create a `.env.local` file with the following:
+Create a `.env.local` file in the root directory and add the following:
 ```env
-BETTER_AUTH_SECRET=your_secret_key
+BETTER_AUTH_SECRET=your_secret_here
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
 BETTER_AUTH_URL=http://localhost:3000
-GOOGLE_CLIENT_ID=your_google_id
-GOOGLE_CLIENT_SECRET=your_google_secret
-NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
-## 🛠️ How to Run
-1. Clone the repository.
-2. Run `npm install`.
-3. Set up `.env.local`.
-4. Run `npm run dev`.
-5. Open `http://localhost:3000`.
-
----
-Developed with ❤️ for SkillSphere Learners.
+## 📂 Project Structure
+- `src/app`: Application routes and pages.
+- `src/components`: Reusable UI components (layout, home, etc.).
+- `src/lib`: Configuration files (auth, database, constants).
+- `src/lib/courses.js`: JSON data for courses.

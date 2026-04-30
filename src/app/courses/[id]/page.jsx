@@ -15,18 +15,19 @@ export default function CourseDetailsPage() {
   
   const course = courses.find(c => c.id === id);
 
-  useEffect(() => {
-    if (!isPending && !session) {
-      router.push(`/login?callbackUrl=/courses/${id}`);
-    }
-  }, [session, isPending, router, id]);
+  // Remove auto-redirect for exploring courses
+  // useEffect(() => {
+  //   if (!isPending && !session) {
+  //     router.push(`/login?callbackUrl=/courses/${id}`);
+  //   }
+  // }, [session, isPending, router, id]);
 
-  if (isPending || !session) {
+  if (isPending) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-base-100">
         <div className="text-center">
           <span className="loading loading-spinner loading-lg text-primary mb-4"></span>
-          <p className="text-base-content/60 animate-pulse">Checking access...</p>
+          <p className="text-base-content/60 animate-pulse">Loading course details...</p>
         </div>
       </div>
     );

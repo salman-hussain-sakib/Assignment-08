@@ -2,10 +2,7 @@ import { betterAuth } from "better-auth";
 import { db } from "./db";
 
 export const auth = betterAuth({
-    database: {
-        db: db,
-        type: "sqlite"
-    },
+    database: db,
     emailAndPassword: {
         enabled: true,
         autoSignIn: true

@@ -2,13 +2,21 @@
 
 import Link from "next/link";
 import { useSession, signOut } from "@/lib/auth-client";
-import { LogOut, User, Menu, X, BookOpen } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
+import { Sun, Moon, BookOpen, User, LogOut, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const { data: session, isPending } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleLogout = async () => {
     await signOut();
@@ -36,6 +44,17 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
+            {/* Theme Toggle */}
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-2 rounded-full hover:bg-base-200 transition-colors"
+                aria-label="Toggle Theme"
+              >
+                {theme === "dark" ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-primary" />}
+              </button>
+            )}
+
             {isPending ? (
               <span className="loading loading-spinner loading-sm text-primary"></span>
             ) : session ? (
@@ -65,7 +84,15 @@ export default function Navbar() {
             )}
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center space-x-2">
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-2 rounded-full hover:bg-base-200"
+              >
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            )}
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-md hover:bg-base-200">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

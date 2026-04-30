@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Briefcase, Send, CodeXml } from "lucide-react";
 
 export default function TopInstructors() {
   const instructors = [
@@ -62,9 +62,9 @@ export default function TopInstructors() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
                     <div className="flex space-x-3">
-                      <a href="#" className="p-2 bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors"><Twitter size={18} /></a>
-                      <a href="#" className="p-2 bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors"><Linkedin size={18} /></a>
-                      <a href="#" className="p-2 bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors"><Github size={18} /></a>
+                      <a href="#" className="p-2 bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors"><Send size={18} /></a>
+                      <a href="#" className="p-2 bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors"><Briefcase size={18} /></a>
+                      <a href="#" className="p-2 bg-white rounded-full text-primary hover:bg-primary hover:text-white transition-colors"><CodeXml size={18} /></a>
                     </div>
                   </div>
                 </div>
