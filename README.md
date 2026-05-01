@@ -6,7 +6,7 @@ SkillSphere is a modern, professional-grade online learning platform built with 
 The goal of SkillSphere is to provide a seamless and interactive learning experience for students, offering high-quality courses with a focus on responsiveness, performance, and security.
 
 ## 🔗 Live URL
-[https://skill-sphere-nine-lovat.vercel.app/register]
+https://skill-sphere-nine-lovat.vercel.app/register
 
 ## ✨ Key Features
 - **Modern UI/UX**: A visually stunning, responsive design using Tailwind CSS and DaisyUI.
