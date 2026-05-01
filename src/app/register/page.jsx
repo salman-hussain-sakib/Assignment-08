@@ -52,11 +52,11 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] flex items-center justify-center p-4 py-12">
+    <div className="min-h-screen bg-base-200 flex items-center justify-center p-4 py-12">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-5xl w-full bg-white rounded-[32px] shadow-2xl shadow-indigo-100/50 overflow-hidden flex flex-col md:flex-row border border-indigo-50"
+        className="max-w-5xl w-full bg-base-100 rounded-[32px] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-base-300"
       >
         {/* Left Side - Info */}
         <div className="w-full md:w-1/2 bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-700 p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
@@ -125,25 +125,25 @@ export default function RegisterPage() {
         </div>
 
         {/* Right Side - Form */}
-        <div className="w-full md:w-1/2 p-8 md:p-12 bg-white relative">
+        <div className="w-full md:w-1/2 p-8 md:p-12 bg-base-100 relative">
           <div className="max-w-md mx-auto">
             <div className="mb-10">
-              <h2 className="text-3xl font-bold text-slate-900 mb-2">Create Account</h2>
-              <p className="text-slate-500">Join us and start your professional development.</p>
+              <h2 className="text-3xl font-bold text-base-content mb-2">Create Account</h2>
+              <p className="text-base-content/60">Join us and start your professional development.</p>
             </div>
 
             <form onSubmit={handleRegister} className="space-y-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-slate-700 ml-1">Full Name</label>
+                  <label className="text-sm font-semibold text-base-content/80 ml-1">Full Name</label>
                   <div className="relative group">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-indigo-600 transition-colors">
+                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-base-content/40 group-focus-within:text-indigo-600 transition-colors">
                       <User size={18} />
                     </div>
                     <input
                       type="text"
                       placeholder="John Doe"
-                      className="block w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                      className="block w-full pl-11 pr-4 py-3.5 bg-base-200/50 border border-base-300 rounded-2xl text-base-content placeholder:text-base-content/40 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
@@ -152,15 +152,15 @@ export default function RegisterPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-slate-700 ml-1">Email Address</label>
+                  <label className="text-sm font-semibold text-base-content/80 ml-1">Email Address</label>
                   <div className="relative group">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-indigo-600 transition-colors">
+                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-base-content/40 group-focus-within:text-indigo-600 transition-colors">
                       <Mail size={18} />
                     </div>
                     <input
                       type="email"
                       placeholder="john@example.com"
-                      className="block w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                      className="block w-full pl-11 pr-4 py-3.5 bg-base-200/50 border border-base-300 rounded-2xl text-base-content placeholder:text-base-content/40 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -170,15 +170,15 @@ export default function RegisterPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-700 ml-1">Photo URL (Optional)</label>
+                <label className="text-sm font-semibold text-base-content/80 ml-1">Photo URL (Optional)</label>
                 <div className="relative group">
-                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-indigo-600 transition-colors">
+                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-base-content/40 group-focus-within:text-indigo-600 transition-colors">
                     <ImageIcon size={18} />
                   </div>
                   <input
                     type="url"
                     placeholder="https://example.com/photo.jpg"
-                    className="block w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                    className="block w-full pl-11 pr-4 py-3.5 bg-base-200/50 border border-base-300 rounded-2xl text-base-content placeholder:text-base-content/40 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
                     value={image}
                     onChange={(e) => setImage(e.target.value)}
                   />
@@ -186,15 +186,15 @@ export default function RegisterPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-700 ml-1">Password</label>
+                <label className="text-sm font-semibold text-base-content/80 ml-1">Password</label>
                 <div className="relative group">
-                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-indigo-600 transition-colors">
+                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-base-content/40 group-focus-within:text-indigo-600 transition-colors">
                     <Lock size={18} />
                   </div>
                   <input
                     type="password"
                     placeholder="••••••••"
-                    className="block w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                    className="block w-full pl-11 pr-4 py-3.5 bg-base-200/50 border border-base-300 rounded-2xl text-base-content placeholder:text-base-content/40 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
@@ -220,17 +220,17 @@ export default function RegisterPage() {
 
               <div className="relative py-4">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-slate-200"></div>
+                  <div className="w-full border-t border-base-300"></div>
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-white px-4 text-slate-500 font-medium">Or register with</span>
+                  <span className="bg-base-100 px-4 text-base-content/60 font-medium">Or register with</span>
                 </div>
               </div>
 
               <button
                 type="button"
                 onClick={handleGoogleLogin}
-                className="w-full bg-white hover:bg-slate-50 text-slate-700 font-semibold py-3.5 border border-slate-200 rounded-2xl transition-all flex items-center justify-center gap-3 active:scale-[0.98]"
+                className="w-full bg-base-100 hover:bg-base-200 text-base-content font-semibold py-3.5 border border-base-300 rounded-2xl transition-all flex items-center justify-center gap-3 active:scale-[0.98]"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path
@@ -253,7 +253,7 @@ export default function RegisterPage() {
                 Google
               </button>
 
-              <p className="text-center text-slate-500 mt-8">
+              <p className="text-center text-base-content/60 mt-8">
                 Already have an account?{" "}
                 <Link href="/login" className="text-indigo-600 font-bold hover:underline">
                   Log in →

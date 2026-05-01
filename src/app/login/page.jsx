@@ -73,7 +73,7 @@ function LoginContent() {
               </div>
               <span className="text-2xl font-bold text-primary">SkillSphere</span>
             </Link>
-            <h2 className="text-4xl font-extrabold text-[#1A2238] mb-4">Login to your account</h2>
+            <h2 className="text-4xl font-extrabold text-base-content mb-4">Login to your account</h2>
             <p className="text-base-content/60">
               Enter your details to access your learning dashboard.
             </p>
@@ -83,7 +83,7 @@ function LoginContent() {
             <div className="space-y-5">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-bold text-[#1A2238]">Your Email</span>
+                  <span className="label-text font-bold text-base-content">Your Email</span>
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-base-content/40" size={18} />
@@ -100,7 +100,7 @@ function LoginContent() {
 
               <div className="form-control">
                 <label className="label flex justify-between">
-                  <span className="label-text font-bold text-[#1A2238]">Password</span>
+                  <span className="label-text font-bold text-base-content">Password</span>
                   <a href="#" className="text-xs font-bold text-primary hover:underline">Forgot?</a>
                 </label>
                 <div className="relative">
@@ -171,7 +171,7 @@ function LoginContent() {
             <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl" />
             
             <div className="mt-12 text-center relative z-10">
-              <h3 className="text-2xl font-bold text-[#1A2238] mb-4">Start your journey today</h3>
+              <h3 className="text-2xl font-bold text-base-content mb-4">Start your journey today</h3>
               <p className="text-base-content/60">Unlock thousands of courses and join a global community of learners.</p>
             </div>
           </div>
