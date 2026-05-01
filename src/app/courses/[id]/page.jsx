@@ -132,12 +132,12 @@ export default function CourseDetailsPage() {
                   <span className="text-4xl font-extrabold text-primary">${course.price}</span>
                   <span className="badge badge-error text-white font-bold">Limited Offer</span>
                 </div>
-                <button className="btn btn-primary btn-lg rounded-2xl w-full shadow-lg shadow-primary/20 mb-4">
+                <Link href={`/checkout/${course.id}?type=enroll`} className="btn btn-primary btn-lg rounded-2xl w-full shadow-lg shadow-primary/20 mb-4">
                   Enroll Now
-                </button>
-                <button className="btn btn-outline btn-lg rounded-2xl w-full">
+                </Link>
+                <Link href={`/checkout/${course.id}?type=buy`} className="btn btn-outline btn-lg rounded-2xl w-full">
                   Buy Now
-                </button>
+                </Link>
                 <div className="mt-8 space-y-4">
                   <p className="text-center text-xs text-base-content/40 font-bold uppercase tracking-widest">Included in this course</p>
                   <div className="flex items-center space-x-3 text-sm">

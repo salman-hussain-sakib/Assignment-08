@@ -70,14 +70,25 @@ export default function Navbar() {
                     />
                   </div>
                 </div>
-                <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow-xl menu menu-sm dropdown-content bg-base-100 rounded-box w-52 border border-base-200">
-                  <li className="px-4 py-2 border-bottom border-base-200 mb-1">
-                    <p className="font-bold text-sm">{session.user.name}</p>
-                    <p className="text-xs text-base-content/60 truncate">{session.user.email}</p>
-                  </li>
-                  <li><Link href="/profile"><User size={16} /> Profile</Link></li>
-                  <li><button onClick={handleLogout} className="text-error"><LogOut size={16} /> Logout</button></li>
-                </ul>
+                <div tabIndex={0} className="mt-3 z-[1] p-3 shadow-2xl dropdown-content bg-base-100 rounded-3xl w-64 border border-base-200">
+                  <div className="px-4 py-3 mb-2 bg-base-200/50 rounded-2xl">
+                    <p className="font-bold text-sm text-base-content">{session.user.name}</p>
+                    <p className="text-xs text-base-content/60 truncate mt-1">{session.user.email}</p>
+                  </div>
+                  <ul className="menu menu-sm p-0 space-y-1">
+                    <li>
+                      <Link href="/profile" className="rounded-xl px-4 py-2.5 hover:bg-primary/10 hover:text-primary transition-colors font-medium">
+                        <User size={18} className="opacity-70 mr-2" /> My Profile
+                      </Link>
+                    </li>
+                    <div className="divider my-1 opacity-50"></div>
+                    <li>
+                      <button onClick={handleLogout} className="rounded-xl px-4 py-2.5 text-error hover:bg-error/10 hover:text-error transition-colors font-medium">
+                        <LogOut size={18} className="opacity-70 mr-2" /> Logout
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </div>
             ) : (
               <div className="flex items-center space-x-2">
