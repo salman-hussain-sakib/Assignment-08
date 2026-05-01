@@ -12,9 +12,7 @@
   "dependencies": {
     "@better-auth/cli": "^1.4.21",
     "@better-auth/mongo-adapter": "^1.6.9",
-    "@libsql/client": "^0.17.3",
     "better-auth": "^1.6.9",
-    "better-sqlite3": "^12.9.0",
     "clsx": "^2.1.1",
     "daisyui": "^5.5.19",
     "framer-motion": "^12.38.0",
